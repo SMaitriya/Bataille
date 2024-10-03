@@ -2,7 +2,7 @@ public class Carte {
 
     private String couleur;
     private int valeur;
-    private boolean estSupérieurA;
+    private boolean estSuperieurA;
 
 
     // Constructeur
@@ -18,7 +18,7 @@ public class Carte {
         return couleur;
     }
 
-    public boolean estSupérieurA(Carte autrecarte) {
+    public boolean estSuperieurA(Carte autrecarte) {
        return  this.valeur > autrecarte.valeur;
     }
 
