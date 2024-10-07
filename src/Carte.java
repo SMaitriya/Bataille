@@ -3,17 +3,17 @@ public class Carte {
     private String couleur;
     private int valeur;
     private boolean estSuperieurA;
-    private static String[] couleurs = {"Coeur", "Pique", "Carreau", "Trèfle"};
-    private static int[] valeurs = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
+    public static String[] couleurs = {"Coeur", "Pique", "Carreau", "Trèfle"};
+    public static String[] valeurs = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Valet", "Reine", "Rois", "As"};
 
     // Constructeur
+
     public Carte(String couleur, int valeur){
         this.couleur = couleur;
         this.valeur = valeur;
     }
 
     // Accesseurs
-
 
     public String getCouleur() {
         return couleur;
@@ -23,7 +23,8 @@ public class Carte {
         return valeur;
     }
 
-    // Modificateurs (Setters)
+    // SETTER
+
     public void setCouleur(String couleur) {
         this.couleur = couleur;
     }
@@ -33,11 +34,17 @@ public class Carte {
     }
 
 
-
     // Comparateur
 
-    public boolean estSuperieurA(Carte autrecarte) {
-       return  this.valeur > autrecarte.valeur;
+    public boolean estSuperieurA(Carte c) {
+       return  this.valeur > c.valeur;
+    }
+
+    // Methode
+
+    @Override
+    public String toString() {
+        return couleur + " " + valeurs[valeur - 1];
     }
 
 
